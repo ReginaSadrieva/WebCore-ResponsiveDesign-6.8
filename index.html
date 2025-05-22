@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CPS — Услуги и сервисы</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body class="page">
   <header class="header">
     <div class="header__container">
-      <button class="header__menu-btn">
-        <img src="img/burger.png" alt="Меню" />
-      </button>
-      <div class="header__separator header__separator--before-logo"></div>
-      <img src="img/Group.png" alt="CPS logo" class="header__logo" />
-      <div class="header__separator header__separator--after-logo"></div>
+      <div class="header__left">
+        <button class="header__menu-btn">
+          <img src="img/burger.png" alt="Меню" />
+        </button>
+
+        <div class="header__separator header__separator--before-logo">
+        </div>
+
+        <img src="img/Group.png" alt="CPS logo" class="header__logo" />
+
+        <div class="header__separator header__separator--after-logo">
+        </div>
+      </div>
       <div class="header__icons">
-        <button class="header__icon-btn">
-          <img src="img/call.png" alt="Позвонить" />
-        </button>
-        <button class="header__icon-btn">
-          <img src="img/chat.png" alt="Чат" />
-        </button>
-        <button class="header__icon-btn">
-          <img src="img/profile.png" alt="Профиль" />
-        </button>
-        <button class="header__icon-btn">
-          <img src="img/repair.png" alt="Оставить заявку" />
-        </button>
-        <button class="header__icon-btn">
-          <img src="img/checkstatus.png" alt="Статус ремонта" />
-        </button>
+
+        <!-- Mobile (<430px) -->
+        <div class="header__icons--mobile-only">
+          <button class="header__icon-btn">
+            <img src="img/repair.png" alt="Оставить заявку" />
+          </button>
+          <button class="header__icon-btn">
+            <img src="img/checkstatus.png" alt="Статус ремонта" />
+          </button>
+        </div>
+
+        <!-- Tablets (430px–768px) -->
+        <div class="header__icons--tablet-only">
+          <button class="header__icon-btn">
+            <img src="img/call.png" alt="Позвонить" />
+          </button>
+          <button class="header__icon-btn">
+            <img src="img/chat.png" alt="Чат" />
+          </button>
+          <button class="header__icon-btn">
+            <img src="img/profile.png" alt="Профиль" />
+          </button>
+          <div class="header__separator header__separator--after-profile">
+          </div>
+          <button class="header__icon-btn">
+            <img src="img/repair.png" alt="Оставить заявку" />
+          </button>
+          <button class="header__icon-btn">
+            <img src="img/checkstatus.png" alt="Статус ремонта" />
+          </button>
+        </div>
+
+        <!-- Desktop (>=768px) -->
+        <div class="header__icons--desktop-only">
+          <button class="header__icon-btn" aria-label="Оставить заявку">
+            <img src="img/repair.png" alt="Оставить заявку" />
+          </button>
+          <button class="header__icon-btn" aria-label="Статус ремонта">
+            <img src="img/checkstatus.png" alt="Статус ремонта" />
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -46,24 +81,34 @@
       <button class="menu-scroll__item">Специальные цены</button>
     </nav>
 
-    <section class="services__desc">
-      <p class="services__text">
-        Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-        Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-        <br>
-        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает 
-        большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, 
-        в свою очередь, советуют нас родным и близким.
-      </p>
-      <a href="#" class="services__link">
-        <img src="img/expand.png" alt="Читать далее" class="services__link-icon" /> Читать далее
-      </a>
-      
-    </section>
+    <section class="services__content">
+      <section class="services__desc">
+        <p class="services__text">
 
-    <section class="services__image-block">
-      <img src="img/banner.png" alt="Табличка CPS" class="services__image" />
+          <span class="text--mobile">
+            Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+            Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+          </span>
+          <span class="text--tablet">
+            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнёра.
+          </span>
+          <span class="text--desktop">
+            Что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по
+            рекомендациям и, в свою очередь, советуют нас родным и близким.
+          </span>
+        </p>
+
+        <a href="#" class="services__link">
+          <img src="img/expand.png" alt="Читать далее" class="services__link-icon" /> Читать далее
+        </a>
+
+      </section>
+
+      <section class="services__image-block">
+        <img src="img/banner.png" alt="Табличка CPS" class="services__image" />
+      </section>
     </section>
   </main>
 </body>
+
 </html>

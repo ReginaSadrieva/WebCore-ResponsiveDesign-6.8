@@ -63,15 +63,30 @@ body {
     align-items: center;
 }
 
+/* General rules for header */
+.header__menu-btn,
+.header__separator,
+.header__button-text {
+    display: none;
+}
+
+/* General rules for text */
+.text--mobile,
+.text--tablet,
+.text--desktop {
+    display: none;
+}
+
 .header__separator--before-logo,
 .header__separator--after-logo {
-  width: 2px;
-  height: 32px;
-  background-color: #EAEAEA;
-  margin: 0 8px;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    margin: 0 8px;
 }
 
 .header__logo {
+    display: block;
     height: 50.81px;
     width: 96.55px;
 }
@@ -197,73 +212,18 @@ body {
 
 /* ================== MEDIA QUERIES ================== */
 
-/* Tablets (430px–768px) */
-@media (min-width: 430px) and (max-width: 768px) {
-    .header {
-        background-color: white;
-      } 
-      
-    .header__container {
-        padding: 16px 32px;
-    }
-
-    .menu-scroll {
-        gap: 16px;
-    }
-
-    .menu-scroll__item {
-        font-size: 16px;
-    }
-
-    .services__title {
-        font-size: 26px;
-        margin: 32px 0 16px;
-    }
-
-    /* Header buttons - tablets */
-    .header__menu-btn,
-    .header__icon-btn {
-        padding: 8px;
-    }
+/* Hide all icon groups by default */
+.header__icons--mobile-only,
+.header__icons--tablet-only,
+.header__icons--desktop-only {
+    display: none;
 }
 
-/* Desktop (768px+) */
-@media (min-width: 768px) {
-    .header {
-        background-color: #f8f8f8;
-      }
-
-    .header__container {
-        padding: 24px 48px;
-    }
-
-    .menu-scroll {
-        gap: 24px;
-    }
-
-    .menu-scroll__item {
-        font-size: 18px;
-    }
-
-    /* Header buttons - desktop */
-    .header__menu-btn,
-    .header__icon-btn {
-        padding: 10px;
-    }
-    
-    .header__icon-btn:nth-child(1),
-    .header__icon-btn:nth-child(2),
-    .header__icon-btn:nth-child(3) {
-      display: none;
-    }  
-
-}
-
-/* Phone (до 430px) */
+/* Mobile (<430px) */
 @media (max-width: 429px) {
     .header {
         background-color: white;
-      }
+    }
 
     .menu-scroll__item {
         font-size: 13px;
@@ -292,10 +252,161 @@ body {
         padding: 6px;
     }
 
-    .header__icon-btn:nth-child(1),
-    .header__icon-btn:nth-child(2),
-    .header__icon-btn:nth-child(3) {
-      display: none;
-    } 
+    /* Icons visible only on mobile */
+    .header__icons--mobile-only {
+        display: flex;
+        gap: 16px;
+    }
 
+    .header__separator--after-logo {
+        display: block;
+    }
+
+    .text--mobile {
+        display: inline;
+    }
+}
+
+/* Tablets (430px–768px) */
+@media (min-width: 430px) and (max-width: 768px) {
+    .header {
+        background-color: white;
+    }
+
+    .header__container {
+        padding: 16px 32px;
+    }
+
+    .menu-scroll {
+        gap: 16px;
+    }
+
+    .menu-scroll__item {
+        font-size: 16px;
+    }
+
+    .services__title {
+        font-size: 26px;
+        margin: 32px 0 16px;
+    }
+
+    /* Header buttons - tablets */
+    .header__menu-btn,
+    .header__icon-btn {
+        padding: 8px;
+    }
+
+    /* Icons visible only on tablet */
+    .header__icons--tablet-only {
+        display: flex;
+        gap: 16px;
+    }
+
+    .header__separator--before-logo,
+    .header__separator--after-profile {
+        display: block;
+    }
+
+    /* Text and Banner display */
+    .services__content {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+    }
+
+    .services__desc {
+        flex: 1;
+    }
+
+    .services__image-block {
+        flex: 0 0 360px;
+    }
+
+    .services__image {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .text--mobile,
+    .text--tablet {
+        display: inline;
+    }
+}
+
+/* Desktop (>=768px) */
+@media (min-width: 768px) {
+    .header {
+        background-color: #f8f8f8;
+    }
+
+    .header__container {
+        padding: 24px 48px;
+    }
+
+    .menu-scroll {
+        gap: 24px;
+    }
+
+    .menu-scroll__item {
+        font-size: 18px;
+    }
+
+    /* Header buttons - desktop */
+    .header__menu-btn,
+    .header__icon-btn {
+        padding: 10px;
+    }
+
+    /* Icons visible only on desktop */
+    .header__icons--desktop-only {
+        display: flex;
+        gap: 16px;
+    }
+
+    .header__separator {
+        display: none !important;
+    }
+
+    /* Hide Menu button and Logo on the Desktop */
+    .header__menu-btn,
+    .header__logo {
+        display: none !important;
+    }
+
+    /* Adding text to the icons for Desktop */
+    .header__icons--desktop-only .header__icon-btn::after {
+        content: attr(aria-label);
+        margin-left: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1B1C21;
+    }
+
+    /* Text and Banner display */
+    .services__content {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+    }
+
+    .services__desc {
+        flex: 1;
+    }
+
+    .services__image-block {
+        flex: 0 0 360px;
+    }
+
+    .services__image {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .text--mobile,
+    .text--tablet,
+    .text--desktop {
+        display: inline;
+    }
 }
