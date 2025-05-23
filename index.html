@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="page">
+<body>
   <header class="header">
     <div class="header__container">
       <div class="header__left">
@@ -26,7 +26,7 @@
       </div>
       <div class="header__icons">
 
-        <!-- Mobile (<430px) -->
+        <!-- Mobile (<767px) -->
         <div class="header__icons--mobile-only">
           <button class="header__icon-btn">
             <img src="img/repair.png" alt="Оставить заявку" />
@@ -36,7 +36,7 @@
           </button>
         </div>
 
-        <!-- Tablets (430px–768px) -->
+        <!-- Tablets (768px–1119px) -->
         <div class="header__icons--tablet-only">
           <button class="header__icon-btn">
             <img src="img/call.png" alt="Позвонить" />
@@ -57,12 +57,14 @@
           </button>
         </div>
 
-        <!-- Desktop (>=768px) -->
+        <!-- Desktop (>=1120px) -->
         <div class="header__icons--desktop-only">
-          <button class="header__icon-btn" aria-label="Оставить заявку">
+          <button class="header__icon-btn">
+            <span class="header__icon-text">Оставить заявку</span>
             <img src="img/repair.png" alt="Оставить заявку" />
           </button>
-          <button class="header__icon-btn" aria-label="Статус ремонта">
+          <button class="header__icon-btn">
+            <span class="header__icon-text">Статус ремонта</span>
             <img src="img/checkstatus.png" alt="Статус ремонта" />
           </button>
         </div>
@@ -79,6 +81,7 @@
       <button class="menu-scroll__item">Цены на услуги</button>
       <button class="menu-scroll__item">Адреса сервисных центров</button>
       <button class="menu-scroll__item">Специальные цены</button>
+      <button class="menu-scroll__item">Отзывы</button>
     </nav>
 
     <section class="services__content">
@@ -88,6 +91,7 @@
           <span class="text--mobile">
             Мы являемся авторизованным сервисным центром по ремонту техники Dell.
             Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+            <br><br>
           </span>
           <span class="text--tablet">
             Мы успешно работаем с 1992 года и заслужили репутацию надежного партнёра.
