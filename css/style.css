@@ -164,7 +164,7 @@ body {
 
 /* ================== CONTENT STYLES ================== */
 .services__title {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     margin: 24px 0 16px;
     padding-left: 12px;
@@ -207,8 +207,8 @@ body {
 }
 
 .services__image {
-    width: 100%;
-    border-radius: 12px;
+    object-fit: cover;
+    border-radius: 0;
 }
 
 /* ================== MEDIA QUERIES ================== */
@@ -227,19 +227,14 @@ body {
         border-bottom: 1px solid #41F6D7;
     }
 
-    .header__container,
-    .services {
+    .header__container {
         padding-left: 16px;
         padding-right: 16px;
     }
 
     .menu-scroll__item {
-        font-size: 13px;
+        font-size: 16px;
         padding: 8px 14px;
-    }
-
-    .services__title {
-        font-size: 20px;
     }
 
     .services__desc {
@@ -251,13 +246,13 @@ body {
     }
 
     .services__image-block {
-        margin-bottom: 24px;
+        margin: 0 -16px 24px -16px;
     }
 
     .services__image {
-        width: 320px;
-        height: 176px;
-        object-fit: cover;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .header__menu-btn,
@@ -286,8 +281,7 @@ body {
         border-bottom: 1px solid #41F6D7;
     }
 
-    .header__container,
-    .services {
+    .header__container {
         padding-left: 24px;
         padding-right: 24px;
     }
@@ -301,7 +295,6 @@ body {
     }
 
     .services__title {
-        font-size: 26px;
         margin: 32px 0 16px;
     }
 
@@ -338,7 +331,6 @@ body {
     .services__image {
         width: 360px;
         height: 208px;
-        object-fit: cover;
     }
 
     .text--mobile,
@@ -357,8 +349,7 @@ body {
         left: 40px;
     }
 
-    .header__container,
-    .services {
+    .header__container {
         padding-left: 32px;
         padding-right: 32px;
     }
@@ -368,7 +359,7 @@ body {
     }
 
     .menu-scroll__item {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .header__menu-btn,
@@ -425,7 +416,6 @@ body {
     .services__image {
         width: 531.35px;
         height: 307px;
-        object-fit: cover;
     }
 
     .text--mobile,
